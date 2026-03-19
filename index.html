@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Haroon Yoldash | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
 </head>
 <body>
     <nav id="desktop-nav">
         <div class="logo">Haroon Yoldash</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about ">About</a></li>
-                <li><a href="#projects ">Projects</a></li>
-                <li><a href="#contact ">Contact</a></li>
-            </ul>
-        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
+
     <nav id="hamburger-nav">
         <div class="logo">Haroon Yoldash</div>
         <div class="hamburger-menu">
@@ -27,115 +26,129 @@
                 <span></span>
             </div>
             <div class="menu-links">
-                <li><a href="#about onclick="toggleMenu()">About</a></li>
-                <li><a href="#projects onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact onclick="toggleMenu()">Contact</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </div>
         </div>
     </nav>
-    <section id="profile">    
-        </div>
+
+    <section id="profile">
         <div class="section__text">
             <p class="section__text__p1">Hello, I'm</p>
             <h1 class="title">Haroon Yoldash</h1>
             <p class="section__text__p2">2nd Year Computer Science Student</p>
             <div class="btn-container">
                 <button class="btn btn-color-2" onclick="window.open('./assets/HaroonYoldashCV.pdf')">Download CV</button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+                <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
             </div>
             <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My Linkedin profile"
-                class="icon" onclick="location.href='https://linkedin.com/in/haroonyoldash'">
-
-                <img src="./assets/github.png" alt="My Github profile"
-                class="icon" onclick="location.href='https://github.com/HaroonYoldash'">
+                <img src="./assets/linkedin.png" alt="Linkedin" class="icon" onclick="location.href='https://linkedin.com/in/haroonyoldash'">
+                <img src="./assets/github.png" alt="Github" class="icon" onclick="location.href='https://github.com/HaroonYoldash'">
             </div>
         </div>
     </section>
+
     <section id="about">
         <h1 class="title">About Me</h1>
-   
-            <div class="about-details-container">
-                <div class="about-containers">
-                <div class="details-container">
-                
-                <p>Hi, I’m Mohammad Haroon Yoldash, a second year Computer Science student 
-                at Sheffield Hallam University with hands on experience C++, C#, PHP, JavaScript, 
-                HTML, and CSS. <br> <br>
-                Previously gained valuable customer service and administrative 
-                experience working in hotel receptions, occasionally covering 
-                as Night Manager when required. Past roles as a Security 
-                Officer at Lodge Service and TSS (Total Security Services) Ltd 
-                further demonstrate a strong commitment to safety, 
-                professionalism, and the integration of technology within 
-                security operations.<br> <br> 
-                I’m currently seeking a 2026 placement in software development or web development where I can apply my technical skills and contribute to real-world projects while continuing to learn and grow as a developer.</p>
-            </div>
-
-            </div>
-
-            
+        <div class="about-details-container">
+            <div class="details-container">
+                <p>Hi, I’m Mohammad Haroon Yoldash, a second-year Computer Science student at Sheffield Hallam University. 
+                I have hands-on experience with C#, C++, Python, PHP, JavaScript, HTML, and CSS. <br><br>
+                Currently, I work as a Control Room CCTV Operator, monitoring site activity and managing access control.
+                I’m looking for a 2026 placement in software engineering or web development.</p>
             </div>
         </div>
-       
     </section>
+
+    <section id="skills">
+        <p class="section__text__p1">Check Out My</p>
+        <h1 class="title">Technical Skills</h1>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Languages</h3>
+                <p>C#, PHP, Python, C++, SQL</p>
+            </div>
+            <div class="skill-card">
+                <h3>Frontend</h3>
+                <p>HTML, CSS, JavaScript</p>
+            </div>
+            <div class="skill-card">
+                <h3>Soft Skills</h3>
+                <p>Agile Collaboration, Problem-Solving</p>
+            </div>
+        </div>
+    </section>
+
     <section id="projects">
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/hospital-management-pic.png" alt="Project 1" class="project-img1">
+        <p class="section__text__p1">Check Out My</p>
+        <h1 class="title">Featured Projects</h1>
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-img-wrapper">
+                    <img src="./assets/hospital-management-pic.png" alt="Project 1" class="project-img">
                 </div>
-                <h2 class="experience-sub-title project-title">Hospital Management System</h2>
+                <h2 class="project-title">Hospital Management System</h2>
+                <p>Managed patient data and scheduling using C#, SQL, and PHP.</p>
                 <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/HaroonYoldash'">Github</button>
+                    <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/HaroonYoldash')">View Code</button>
                 </div>
             </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/energy-calculator.png" alt="Project 1" class="project-img2">
+
+            <div class="project-card">
+                <div class="project-img-wrapper">
+                    <img src="./assets/energy-calculator.png" alt="Project 2" class="project-img">
                 </div>
-                <h2 class="experience-sub-title project-title">Menu System Implementation</h2>
+                <h2 class="project-title">Menu System Implementation</h2>
+                <p>Built a robust C++ console interface for complex menu navigation.</p>
                 <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/HaroonYoldash'">Github</button>
+                    <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/HaroonYoldash')">View Code</button>
                 </div>
             </div>
+
+            <div class="project-card">
+                <div class="project-img-wrapper">
+                    <img src="./assets/project-placeholder.png" alt="Project 3" class="project-img">
+                </div>
+                <h2 class="project-title">Upcoming Project Name</h2>
+                <p>Description of your new project and the tech stack used.</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/HaroonYoldash')">View Code</button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img-wrapper">
+                    <img src="./assets/project-placeholder.png" alt="Project 4" class="project-img">
+                </div>
+                <h2 class="project-title">Future Project Name</h2>
+                <p>Description of your new project and the tech stack used.</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/HaroonYoldash')">View Code</button>
+                </div>
             </div>
         </div>
-       
     </section>
-<section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
-    <h1 class="title">Contact Me</h1>
-    <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-            <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon">
-            <p>
-                <a href="mailto:haroon.yoldash2002@gmail.com">haroon.yoldash2002@gmail.com</a>
-            </p>
+
+    <section id="contact">
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./assets/email.png" alt="Email" class="icon">
+                <p><a href="mailto:haroon.yoldash2002@gmail.com">Email Me</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./assets/linkedin.png" alt="Linkedin" class="icon">
+                <p><a href="https://www.linkedin.com/in/haroonyoldash">Linkedin</a></p>
+            </div>
         </div>
-        <div class="contact-info-container">
-            <img src="./assets/linkedin.png" alt="Linkedin icon" class="icon contact-icon">
-            <p>
-                <a href="https://www.linkedin.com/in/haroonyoldash" target="_blank">Linkedin</a>
-            </p>
-        </div>
-    </div>
-</section>
+    </section>
 
     <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                <li><a href="#about ">About</a></li>
-                <li><a href="#projects ">Projects</a></li>
-                <li><a href="#contact ">Contact</a></li>
-            </ul>
-            </div>
-        </nav>
-        <p>Copyright &#169; 2025 Haroon Yoldash</p>
+        <p>Copyright &#169; 2026 Haroon Yoldash</p>
     </footer>
-    <script src="scirpt.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
