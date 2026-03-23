@@ -58,8 +58,15 @@ a:hover {
 }
 
 /* --- 3. HAMBURGER MENU --- */
-#hamburger-nav { display: none; }
-.hamburger-menu { position: relative; display: inline-block; }
+#hamburger-nav { 
+    display: none; 
+}
+
+.hamburger-menu { 
+    position: relative; 
+    display: inline-block; 
+}
+
 .hamburger-icon {
     display: flex;
     flex-direction: column;
@@ -68,41 +75,71 @@ a:hover {
     width: 30px;
     cursor: pointer;
 }
+
 .hamburger-icon span {
     width: 100%;
     height: 2px;
     background-color: black;
     transition: all 0.3s ease-in-out;
 }
+
 .menu-links {
     position: absolute;
     top: 100%;
     right: 0;
     background-color: white;
     width: fit-content;
+    min-width: 150px; 
     max-height: 0;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 10px 15px rgba(0,0,0,0.1);
     z-index: 10;
+    padding: 0; 
 }
-.menu-links.open { max-height: 300px; padding: 1rem; }
-.menu-links a { display: block; padding: 10px; text-align: center; font-size: 1.5rem; }
-.hamburger-icon.open span:first-child { transform: rotate(45deg) translate(10px, 5px); }
-.hamburger-icon.open span:nth-child(2) { opacity: 0; }
-.hamburger-icon.open span:last-child { transform: rotate(-45deg) translate(10px, -5px); }
+
+.menu-links li {
+    list-style: none; 
+}
+
+.menu-links.open { 
+    max-height: 300px; 
+    padding: 1rem 0; 
+}
+
+.menu-links a { 
+    display: block; 
+    padding: 10px 20px; 
+    text-align: center; 
+    font-size: 1.5rem; 
+    color: black;
+    text-decoration: none;
+}
+
+/* Hamburger to X Animation */
+.hamburger-icon.open span:first-child { 
+    transform: rotate(45deg) translate(10px, 5px); 
+}
+
+.hamburger-icon.open span:nth-child(2) { 
+    opacity: 0; 
+}
+
+.hamburger-icon.open span:last-child { 
+    transform: rotate(-45deg) translate(10px, -5px); 
+}
 
 /* --- 4. SECTIONS GENERAL (FIXED CENTERING) --- */
 section {
     padding-top: 10vh;
     padding-bottom: 10vh;
     height: auto;
-    margin: 0 auto; /* Centered horizontally */
+    margin: 0 auto; 
     max-width: 1200px;
     min-height: fit-content;
     display: flex;
     flex-direction: column;
-    align-items: center; /* This centers the "Check Out My" text */
+    align-items: center; 
 }
 
 .title {
@@ -115,7 +152,7 @@ section {
     text-align: center; 
     font-weight: 600; 
     font-size: 1.2rem;
-    width: 100%; /* Ensures it takes full width for centering */
+    width: 100%; 
 }
 
 /* --- 5. PROFILE SECTION --- */
@@ -165,7 +202,7 @@ section {
 }
 
 #skills {
-    margin-top: 5vh; /* Adds gap between About and Skills */
+    margin-top: 5vh; 
 }
 
 .skills-grid {
@@ -193,16 +230,16 @@ section {
 /* --- 8. PROJECTS (FIXED GAP AND OVERLAP) --- */
 #projects {
     background-color: #f8fafc;
-    padding: 12vh 2rem; /* Increased top padding to prevent overlap */
+    padding: 12vh 2rem; 
     margin: 0;
     width: 100%;
-    max-width: none; /* Allows background to be full width */
+    max-width: none; 
 }
 
 .projects-container {
     display: flex;
     justify-content: center;
-    gap: 2.5rem; /* Increased gap for 4 cards */
+    gap: 2.5rem; 
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 3rem auto 0;
@@ -216,10 +253,10 @@ section {
     border-radius: 20px;
     border: 1px solid #e2e8f0;
     flex: 1;
-    min-width: 280px; /* Slightly narrower to fit 4 better */
+    min-width: 280px; 
     max-width: 400px;
     transition: 0.4s ease;
-    align-items: center; /* Centers project title and text */
+    align-items: center;
 }
 
 .project-card:hover {
@@ -275,4 +312,3 @@ footer {
     width: 100%;
 }
 
-/* --- 10. RESPONSIVE --- */
