@@ -163,7 +163,7 @@ section {
     align-items: center;
 }
 .section__text { text-align: center; }
-.section__text__p2 { font-size: 1.5rem; margin-bottom: 1rem; }
+.section__text__p2 { font-size: 1.3rem; margin-bottom: 1rem; }
 #socials-container { display: flex; justify-content: center; margin-top: 1rem; gap: 1rem; }
 .icon { cursor: pointer; height: 2.5rem; }
 
