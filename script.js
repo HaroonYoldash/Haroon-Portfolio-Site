@@ -1,6 +1,8 @@
 function toggleMenu() {
-    const menu = document.querySelector(".menu-links");
-    const icon = document.querySelector(".hamburger-icon");
+  const menu = document.getElementById("mobileMenu");
+  const btn = document.querySelector(".hamburger-btn");
+  if (menu && btn) {
     menu.classList.toggle("open");
-    icon.classList.toggle("open");
+    btn.classList.toggle("open");
+  }
 }

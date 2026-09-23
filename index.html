@@ -3,260 +3,641 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Haroon Yoldash | Portfolio</title>
+    <title>
+      Mohammad Haroon Yoldash | Graduate Software Engineer Portfolio
+    </title>
+    <meta
+      name="description"
+      content="Portfolio of Mohammad Haroon Yoldash — BSc Computer Science Student at Sheffield Hallam University (1st Class Avg / 74%). Specializing in C#, .NET 8, and resilient backend systems."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="media.css" />
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">M H Y</div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <header class="navbar-wrapper">
+      <nav class="nav-container">
+        <a href="#profile" class="brand-logo">Haroon</a>
 
-    <nav id="hamburger-nav">
-      <div class="logo">Haroon Yoldash</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
+        <ul class="desktop-nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
 
-    <section id="profile">
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">M. Haroon Yoldash</h1>
-        <p class="section__text__p2">Final-Year Computer Science Student</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/HaroonYoldashCV.pdf')"
+        <div class="nav-right">
+          <a
+            href="./assets/HaroonYoldashCV.pdf"
+            target="_blank"
+            class="btn btn-outline btn-sm"
+            >Download CV</a
           >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href = '#contact'">
-            Contact Info
+          <button
+            class="hamburger-btn"
+            onclick="toggleMenu()"
+            aria-label="Toggle navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="Linkedin"
-            class="icon"
-            onclick="location.href = 'https://linkedin.com/in/haroonyoldash'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="Github"
-            class="icon"
-            onclick="location.href = 'https://github.com/HaroonYoldash'"
-          />
-        </div>
-      </div>
-    </section>
+      </nav>
 
-    <section id="about">
-      <h1 class="title">About Me</h1>
-      <div class="about-details-container">
-        <div class="details-container">
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" onclick="toggleMenu()">About</a>
+        <a href="#education" onclick="toggleMenu()">Education</a>
+        <a href="#skills" onclick="toggleMenu()">Skills</a>
+        <a href="#projects" onclick="toggleMenu()">Projects</a>
+        <a href="#experience" onclick="toggleMenu()">Experience</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+        <a
+          href="./assets/HaroonYoldashCV.pdf"
+          target="_blank"
+          class="mobile-cv-link"
+          >Download CV (PDF)</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <section id="profile" class="hero-section">
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span>Looking for 2027 Graduate Software Engineering Roles</span>
+        </div>
+
+        <h1 class="hero-name">Mohammad Haroon Yoldash</h1>
+
+        <p class="hero-role">
+          Final-Year Computer Science Student at
+          <strong>Sheffield Hallam University</strong>
+          <span class="grade-pill">First-Class Avg: 74%</span>
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">Explore Projects</a>
+          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        </div>
+
+        <div class="social-icons">
+          <a
+            href="https://github.com/HaroonYoldash"
+            target="_blank"
+            rel="noreferrer"
+            title="GitHub"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://linkedin.com/in/haroonyoldash"
+            target="_blank"
+            rel="noreferrer"
+            title="LinkedIn"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+              />
+            </svg>
+          </a>
+          <a href="mailto:haroon.yoldash2002@gmail.com" title="Email Haroon">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              ></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <section id="about" class="section-container">
+        <h2 class="section-title">About Me</h2>
+        <div class="card about-card">
           <p>
-            Hi, I'm Mohammad Haroon Yoldash, a final-year Computer Science
-            student at Sheffield Hallam University, currently achieving a
-            First-Class average (74%). Through my studies and personal projects,
-            I have developed experience with C#, Python, PHP, JavaScript,
-            ASP.NET Core, SQL and modern software development practices.
-            <br /><br />
-            Alongside my studies, I work as a Control Room CCTV Operator, where
-            I collaborate with police control rooms and security teams to
-            respond to incidents, maintain accurate records and communicate
-            effectively in a fast-paced environment.<br /><br />
+            I am a final-year Computer Science student at
+            <strong>Sheffield Hallam University</strong>, currently achieving a
+            First-Class Honours average (74%). Through my degree and personal
+            projects, I have developed experience with C#, .NET, Python, PHP,
+            SQL, and web technologies, building applications ranging from
+            full-stack systems to algorithm-focused software.
+          </p>
+          <p>
+            Alongside my studies, I work as a
+            <strong>Control Room CCTV Operator</strong> where I collaborate with
+            police control rooms and security personnel to respond to incidents
+            and maintain accurate records in a fast-paced environment.
+          </p>
+          <p>
             I am currently seeking Graduate Software Engineering opportunities
-            where I can contribute to real-world projects, learn from
-            experienced professionals and further develop my technical skills.
+            where I can contribute to real-world software projects, learn from
+            experienced engineers, and continue developing my software
+            engineering skills.
           </p>
+
+          <div class="stats-grid">
+            <div class="stat-box">
+              <span class="stat-number">74%</span>
+              <span class="stat-text">1st Class Academic Average</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number">5+</span>
+              <span class="stat-text">Projects</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number">6</span>
+              <span class="stat-text">Languages Spoken</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number">2022</span>
+              <span class="stat-text">Employee of the Year Award</span>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <section id="education" class="section-container">
+        <h2 class="section-title">Education & Academic Highlights</h2>
+
+        <div class="education-grid">
+          <div class="card edu-card primary-edu">
+            <div class="edu-header">
+              <div>
+                <span class="tag tag-accent">Sep 2024 – Present</span>
+                <h3 class="edu-title">BSc (Hons) Computer Science</h3>
+                <h4 class="edu-institution">Sheffield Hallam University</h4>
+              </div>
+              <div class="grade-badge">First-Class (74% Avg)</div>
+            </div>
+
+            <p class="edu-desc">
+              Currently in Year 3 and on track for a First-Class degree (74%
+              average).
+            </p>
+
+            <h5 class="subhead">Selected Module Marks:</h5>
+            <div class="module-bars">
+              <div class="module-bar-item">
+                <div class="module-info">
+                  <span>Databases and the Web</span>
+                  <span class="module-score">81%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 81%"></div>
+                </div>
+              </div>
+
+              <div class="module-bar-item">
+                <div class="module-info">
+                  <span
+                    >Fundamentals of Mathematics & Computer Architecture</span
+                  >
+                  <span class="module-score">76%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 76%"></div>
+                </div>
+              </div>
+
+              <div class="module-bar-item">
+                <div class="module-info">
+                  <span>Algorithms & Data Structures</span>
+                  <span class="module-score">74%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 74%"></div>
+                </div>
+              </div>
+
+              <div class="module-bar-item">
+                <div class="module-info">
+                  <span>Programming for Computer Science</span>
+                  <span class="module-score">74%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 74%"></div>
+                </div>
+              </div>
+
+              <div class="module-bar-item">
+                <div class="module-info">
+                  <span>Professional Software Projects</span>
+                  <span class="module-score">65%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 65%"></div>
+                </div>
+              </div>
+            </div>
+
+            <h5 class="subhead">Year 3 Modules:</h5>
+            <div class="tag-cloud">
+              <span class="tag">Software Architecture and Design</span>
+              <span class="tag">Secure Software Engineering</span>
+              <span class="tag">AI & Machine Learning 2</span>
+              <span class="tag">Development Project</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section-container">
+        <h2 class="section-title">Technical Skills & Spoken Languages</h2>
+
+        <div class="skills-grid">
+          <div class="card skill-card">
+            <h3 class="skill-category-title">
+              <span class="skill-icon">💻</span> Programming Languages
+            </h3>
+            <div class="tag-cloud">
+              <span class="tag tag-highlight">C#</span>
+              <span class="tag tag-highlight">Python</span>
+              <span class="tag">C++</span>
+              <span class="tag">PHP</span>
+            </div>
+          </div>
+
+          <div class="card skill-card">
+            <h3 class="skill-category-title">
+              <span class="skill-icon">🌐</span> Web & Frameworks
+            </h3>
+            <div class="tag-cloud">
+              <span class="tag tag-highlight">ASP.NET Core</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+
+          <div class="card skill-card">
+            <h3 class="skill-category-title">
+              <span class="skill-icon">🗄️</span> Databases & Tools
+            </h3>
+            <div class="tag-cloud">
+              <span class="tag tag-highlight">SQLite</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Git & GitHub</span>
+            </div>
+          </div>
+
+          <div class="card skill-card">
+            <h3 class="skill-category-title">
+              <span class="skill-icon">🗣️</span> Spoken Languages
+            </h3>
+            <div class="tag-cloud">
+              <span class="tag tag-lang">English</span>
+              <span class="tag tag-lang">Hindi</span>
+              <span class="tag tag-lang">Turkish</span>
+              <span class="tag tag-lang">Urdu</span>
+              <span class="tag tag-lang">Persian</span>
+              <span class="tag tag-lang">Turkmen</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section-container">
+        <h2 class="section-title">Software Projects</h2>
+        <p class="section-subtitle">
+          Real-world applications covering full-stack architectures and
+          algorithms
+        </p>
+
+        <div class="projects-grid">
+          <article class="card project-card featured-project">
+            <div class="project-img-box">
+              <img
+                src="./assets/TrackFlow.png"
+                alt="TrackFlow Hardware Asset Tracker"
+                class="project-img"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x350/111827/38bdf8?text=TrackFlow+Hardware+Tracker'
+                "
+              />
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag tag-tech">C#</span>
+                <span class="tag tag-tech">.NET 8</span>
+                <span class="tag tag-tech">ASP.NET Core</span>
+                <span class="tag tag-tech">EF Core</span>
+                <span class="tag tag-tech">SQLite</span>
+                <span class="tag tag-tech">xUnit</span>
+              </div>
+              <h3 class="project-name">TrackFlow — Hardware Asset Tracker</h3>
+              <p class="project-text">
+                Built a full-stack asset management application using C#,
+                ASP.NET Core, Entity Framework Core, and SQLite. The system
+                allows users to manage IT assets, track device allocations,
+                monitor asset values, and view checkout history through an
+                interactive dashboard. Automated testing and GitHub Actions were
+                used to improve reliability.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/HaroonYoldash/trackflow-api"
+                  target="_blank"
+                  class="btn btn-primary btn-sm"
+                  >GitHub →</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-img-box">
+              <img
+                src="./assets/Music-Playlist-Manager.png"
+                alt="Music Playlist Manager"
+                class="project-img"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x350/111827/38bdf8?text=Music+Playlist+Manager'
+                "
+              />
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag tag-tech">C#</span>
+                <span class="tag tag-tech">Singly Linked List</span>
+                <span class="tag tag-tech">Data Structures</span>
+                <span class="tag tag-tech">CSV Parsing</span>
+              </div>
+              <h3 class="project-name">Music Playlist Manager</h3>
+              <p class="project-text">
+                A C# console application that uses a
+                <strong>Singly Linked List</strong> to manage music playlists.
+                The application supports loading data from CSV files, searching
+                for songs, sorting by artist or duration, filtering by genre,
+                and shuffling playlists while demonstrating core data structure
+                and algorithm concepts.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/HaroonYoldash/Music-Playlist-Manager"
+                  target="_blank"
+                  class="btn btn-primary btn-sm"
+                  >GitHub →</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-img-box">
+              <img
+                src="./assets/Expression-Evaluation.png"
+                alt="Expression Evaluator"
+                class="project-img"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x350/111827/38bdf8?text=Expression+Evaluator'
+                "
+              />
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag tag-tech">C#</span>
+                <span class="tag tag-tech">Shunting Yard</span>
+                <span class="tag tag-tech">Stacks & Queues</span>
+              </div>
+              <h3 class="project-name">Algorithmic Expression Evaluator</h3>
+              <p class="project-text">
+                Implemented Dijkstra's Shunting Yard algorithm and stack-based
+                postfix evaluation to process and calculate complex mathematical
+                expressions.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/HaroonYoldash/Expression-Evaluator"
+                  target="_blank"
+                  class="btn btn-primary btn-sm"
+                  >GitHub →</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-img-box">
+              <img
+                src="./assets/hospital-management-pic.png"
+                alt="Hospital Management System"
+                class="project-img"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x350/111827/38bdf8?text=Hospital+Management+System'
+                "
+              />
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag tag-tech">PHP</span>
+                <span class="tag tag-tech">SQLite</span>
+                <span class="tag tag-tech">JavaScript</span>
+                <span class="tag tag-tech">HTML/CSS</span>
+              </div>
+              <h3 class="project-name">Hospital Management System</h3>
+              <p class="project-text">
+                A web-based hospital management system built using PHP, SQLite,
+                JavaScript, HTML, and CSS. Patients can book appointments and
+                submit enquiries, while staff manage patient information and
+                administrators control user accounts and system access.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/HaroonYoldash/Hospital-Management-System-"
+                  target="_blank"
+                  class="btn btn-primary btn-sm"
+                  >GitHub →</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-img-box">
+              <img
+                src="./assets/energy-calculator.png"
+                alt="Multi-Utility Console Application"
+                class="project-img"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x350/111827/38bdf8?text=Energy+Calculator+CLI'
+                "
+              />
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag tag-tech">C#</span>
+                <span class="tag tag-tech">CLI</span>
+                <span class="tag tag-tech">Defensive Programming</span>
+              </div>
+              <h3 class="project-name">Multi-Utility Console Application</h3>
+              <p class="project-text">
+                Developed a C# console application with an interactive menu
+                system, input validation, and a range of utility tools,
+                including an Energy Tariff Calculator.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/HaroonYoldash/Menu-System-"
+                  target="_blank"
+                  class="btn btn-primary btn-sm"
+                  >GitHub →</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section-container">
+        <h2 class="section-title">Work Experience & Achievements</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="card timeline-card">
+              <div class="timeline-header">
+                <span class="tag tag-accent">April 2025 – Present</span>
+                <h3 class="role-title">Control Room CCTV Operator</h3>
+                <h4 class="company-name">SSG Support Services Group</h4>
+              </div>
+              <p class="role-desc">
+                Monitor CCTV systems and support security operations across
+                multiple sites. Work closely with police control rooms and
+                security personnel to respond to incidents, maintain accurate
+                records, and ensure effective communication in fast-paced
+                situations.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="card timeline-card">
+              <div class="timeline-header">
+                <span class="tag">June 2022 – March 2024</span>
+                <h3 class="role-title">
+                  Hotel Receptionist & Night Duty Manager
+                </h3>
+                <h4 class="company-name">Britannia Grand Hotel</h4>
+              </div>
+              <p class="role-desc">
+                Managed guest bookings through platforms including Booking.com,
+                Expedia, Hotels.com, and the hotel's internal reservation system
+                while assisting with check-ins and guest enquiries.
+              </p>
+              <p class="role-desc">
+                Regularly covered Night Duty Manager responsibilities during
+                staff holidays and absences, supporting overnight operations and
+                resolving guest issues.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="achievements-box">
+          <h3 class="achievements-title">Achievements & Certifications</h3>
+          <div class="achievements-grid">
+            <div class="achievement-pill">
+              <span class="achieve-icon">🏆</span>
+              <div>
+                <strong>Employee of the Year (2022)</strong>
+                <p>Britannia Grand Hotel</p>
+              </div>
+            </div>
+
+            <div class="achievement-pill">
+              <span class="achieve-icon">🚗</span>
+              <div>
+                <strong>Full UK Driving License</strong>
+                <p>Clean & Independent</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-container contact-section">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="contact-sub">
+          Currently seeking 2027 Graduate Software Engineering, Technology and
+          Junior Developer opportunities.
+        </p>
+
+        <div class="contact-methods">
+          <a
+            href="mailto:haroon.yoldash2002@gmail.com"
+            class="card contact-action-card"
+          >
+            <div class="contact-icon-box">✉️</div>
+            <div class="contact-details">
+              <span class="contact-label">Email Me</span>
+              <span class="contact-val">haroon.yoldash2002@gmail.com</span>
+            </div>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/haroonyoldash"
+            target="_blank"
+            class="card contact-action-card"
+          >
+            <div class="contact-icon-box">🔗</div>
+            <div class="contact-details">
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-val">linkedin.com/in/haroonyoldash</span>
+            </div>
+          </a>
+
+          <a
+            href="https://github.com/HaroonYoldash"
+            target="_blank"
+            class="card contact-action-card"
+          >
+            <div class="contact-icon-box">💻</div>
+            <div class="contact-details">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-val">github.com/HaroonYoldash</span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <p>© 2026 Mohammad Haroon Yoldash</p>
+        <p class="footer-sub">
+          BSc (Hons) Computer Science | Sheffield Hallam University
+        </p>
       </div>
-    </section>
-
-    <section id="skills">
-      <p class="section__text__p1">Check Out My</p>
-      <h1 class="title">Technical Skills</h1>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3>Languages</h3>
-          <p>C#, Python, PHP, C++, SQL</p>
-        </div>
-        <div class="skill-card">
-          <h3>Frontend</h3>
-          <p>HTML, CSS, JavaScript, ASP.NET Core</p>
-        </div>
-        <div class="skill-card">
-          <h3>Soft Skills</h3>
-          <p>Agile Collaboration, Problem-Solving</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <p class="section__text__p1">Check Out My</p>
-      <h1 class="title">Projects</h1>
-      <div class="projects-container">
-
-        <div class="project-card">
-          <div class="project-img-wrapper">
-            <img
-              src="./assets/TrackFlow.png"
-              alt="C# Console Application"
-              class="project-img"
-            />
-          </div>
-          <h2 class="project-title">TrackFlow - Hardware Asset Tracker</h2>
-<p>
-            A full-stack asset management web app with a live dashboard to track
-            workplace equipment, calculate inventory costs, and manage checkout history.
-            Built with automated server validation, xUnit test coverage, and a GitHub Actions CI pipeline.
-          </p>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="window.open('https://github.com/HaroonYoldash')"
-            >
-              View Code
-            </button>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-img-wrapper">
-            <img
-              src="./assets/hospital-management-pic.png"
-              alt="Project 1"
-              class="project-img"
-            />
-          </div>
-          <h2 class="project-title">Hospital Management System</h2>
-          <p>Managed patient data and scheduling using C#, SQL, and PHP.</p>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="window.open('https://github.com/HaroonYoldash')"
-            >
-              View Code
-            </button>
-          </div>
-        </div>
-
-       
-
-        <div class="project-card">
-          <div class="project-img-wrapper">
-            <img
-              src="./assets/Music-Playlist-Manager.png"
-              alt="Music Manager"
-              class="project-img"
-            />
-          </div>
-          <h2 class="project-title">Music Playlist Manager</h2>
-          <p>
-            C# application using <strong>Singly Linked Lists</strong> to manage,
-            sort and shuffle music data with CSV integration.
-          </p>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="
-                window.open(
-                  'https://github.com/HaroonYoldash/Project_2_Music_Playlist_Manager',
-                )
-              "
-            >
-              View Code
-            </button>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-img-wrapper">
-            <img
-              src="./assets/Expression-Evaluation.png"
-              alt="Expression Evaluator"
-              class="project-img"
-            />
-          </div>
-          <h2 class="project-title">Expression Evaluator</h2>
-          <p>
-            Algorithmic tool using <strong>Stacks</strong> and the
-            <strong>Shunting Yard algorithm</strong> to evaluate complex infix
-            expressions.
-          </p>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="window.open('https://github.com/HaroonYoldash')"
-            >
-              View Code
-            </button>
-          </div>
-        </div>
-
-         <div class="project-card">
-          <div class="project-img-wrapper">
-            <img
-              src="./assets/energy-calculator.png"
-              alt="C# Console Application"
-              class="project-img"
-            />
-          </div>
-          <h2 class="project-title">Multi-Utility Console Application</h2>
-          <p>
-            A modular <strong>C# Console Application</strong> featuring a menu
-            driven interface and input validation for tools like an Energy
-            Calculator.
-          </p>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="window.open('https://github.com/HaroonYoldash')"
-            >
-              View Code
-            </button>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="contact">
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img src="./assets/email.png" alt="Email" class="icon" />
-          <p><a href="mailto:haroon.yoldash2002@gmail.com">Email Me</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img src="./assets/linkedin.png" alt="Linkedin" class="icon" />
-          <p>
-            <a href="https://www.linkedin.com/in/haroonyoldash">Linkedin</a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <p>Copyright &#169; 2026 Haroon Yoldash</p>
     </footer>
 
     <script src="script.js"></script>
